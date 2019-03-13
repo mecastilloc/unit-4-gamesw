@@ -1,0 +1,95 @@
+html{
+    background-image: url("../images/bg.jpg");
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    z-index: -1;
+}
+
+body{
+    color: white;
+}
+    p {
+        margin: 0;
+        color: white;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        border: 10px solid red;
+        margin: 0 10px 0 10px;
+        }
+
+.character{
+    text-align: center;
+}
+/* }
+.title{
+    background: rgb(255, 0, 0);
+    color: azure;
+    font-size: 35px;
+    font-weight: bolder;
+    width: 280px;
+    text-align: center;
+}
+
+.container{
+    color: rgb(255, 251, 0);
+    /* font-weight: bold; 
+    font-size: 18px;
+    /* inline-size: 2px; 
+}
+.instructions{
+    background: rgba(0, 247, 255, 0.2);
+    
+}
+
+.target{
+    background: rgba(47, 255, 245, 0.4);
+}
+
+#randomNumber{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+.stats{
+    background: rgba(78, 1, 88, 0.336);
+}
+
+#wins-txt{
+    color: rgb(7, 167, 7);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#losses-txt{
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    }
+    .totalScore{
+        background: rgba(47, 61, 255, 0.5);
+    }
+
+#totalScore{
+        font-size: 30px;
+        font-weight: bolder;
+        color: white;
+} 
+
+.btn{
+    margin-top: 10px;
+} */
