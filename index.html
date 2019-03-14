@@ -53,9 +53,11 @@
 		<h1 class="ch "> Choose Your Character</h1>
 	</div>
 
+	
+
 	<!-- Chosen character zone-->
 	<div class="container chosen">
-		<div class="row ">
+		<div class="row choosenrow">
 			<div class="col-xm-3  chosen luke-chosen">
 				<p>Luke Skywalker</p>
 				<img id="luke-img" data-value="" src="assets/images/luke.jpg" alt="img1" />
@@ -77,10 +79,17 @@
 				<p class="yoda-health"></p>
 			</div>
 		</div>
-		<h1> You are Fighting With</h1>
-		<button>Attack</button>
+
+			<h1> You are Fighting With</h1>
+		<button id="attack">Attack</button>
+		<div id="msg" class="container">
+				<p id="playermsg"></p>
+				<p id="defendermsg"></p>
+				<p id="choosenew"></p>
+			</div>
 	</div>
 	<br>
+	
 
 	<!-- defender zone-->
 	<div class="container defender">
@@ -136,23 +145,7 @@
 		<h1>Enemies</h1>
 	</div>
 	
-
-
-
-	<div class="container totalScore">
-		<div class="row">
-			<div class="col-sm-6">
-				<p>Your total score is:</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-6 ">
-				<p id="totalScore"></p>
-			</div>
-		</div>
-	</div>
-	<div class="container">
+		<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-xm-6 align-self-center">
 				<button onClick="location.href=location.href" class="btn btn-dark">Reset Scores</button>
@@ -161,7 +154,7 @@
 	</div>
 
 	
-
+</div>
 	<!-- <script src="assets/javascript/game.js"></script> -->
 
 

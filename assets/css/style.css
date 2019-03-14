@@ -24,10 +24,18 @@ body{
         cursor: pointer;
         border: 10px solid red;
         margin: 0 10px 0 10px;
+        
         }
 
 .character{
     text-align: center;
+}
+
+/* .choosenrow{
+    float: left;
+} 
+#msg{
+    float: left;
 }
 /* }
 .title{
