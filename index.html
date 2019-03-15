@@ -18,16 +18,13 @@
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 	<title>StarWarsRPG</title>
-	
 </head>
 
 <body class="bg-transparent">
 	<!-- Wait for the page to load template -->
 	<div class="container-fluid" id="startpage">
 		<img src="" alt="">
-	
-</div>
-
+	</div>
 
 	<!-- characters to choose zone-->
 	<div class="container character-cont">
@@ -56,11 +53,9 @@
 		<h1> Choose Your Character</h1>
 	</div>
 
-	
-
 	<!-- Chosen character zone-->
 	<div class="container chosen-cont">
-			<h1> You are now...</h1>
+		<h1> You are now...</h1>
 		<div class="row choosenrow">
 			<div class="col-xm-3  chosen luke-chosen">
 				<p>Luke Skywalker</p>
@@ -84,49 +79,45 @@
 			</div>
 		</div>
 
-			
 		<button id="attack" class="btn btn-warning">Attack</button>
 		<div id="msg" class="container">
-				<h2 id="win-lose"></h2>	
+			<h2 id="win-lose"></h2>
 			<p id="playermsg"></p>
-				<p id="defendermsg"></p>
-				<p id="choosenew"></p>
-				
-			</div>
+			<p id="defendermsg"></p>
+			<p id="choosenew"></p>
+		</div>
 	</div>
-	
-	
 
 	<!-- defender zone-->
 	<div class="container defender defender-cont">
-			<h1>Your Challenger is...</h1>
-			<div class="row ">
-				<div class="col-xm-3  defender luke-defender">
-					<p>Luke Skywalker</p>
-					<img id="luke-img" data-value="" src="assets/images/luke.jpg" alt="img1" />
-					<p class="luke-health"></p>
-				</div>
-				<div class="col-xm-3  defender vader-defender">
-					<p>Darth Vader</p>
-					<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
-					<p class="vader-health"></p>
-				</div>
-				<div class="col-xm-3 defender maul-defender">
-					<p>Darth Maul</p>
-					<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
-					<p class="maul-health"></p>
-				</div>
-				<div class="col-xm-3  defender yoda-defender">
-					<p>Yoda</p>
-					<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
-					<p class="yoda-health"></p>
-				</div>
+		<h1>Your Challenger is...</h1>
+		<div class="row ">
+			<div class="col-xm-3  defender luke-defender">
+				<p>Luke Skywalker</p>
+				<img id="luke-img" data-value="" src="assets/images/luke.jpg" alt="img1" />
+				<p class="luke-health"></p>
 			</div>
-				</div>
-		
+			<div class="col-xm-3  defender vader-defender">
+				<p>Darth Vader</p>
+				<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
+				<p class="vader-health"></p>
+			</div>
+			<div class="col-xm-3 defender maul-defender">
+				<p>Darth Maul</p>
+				<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
+				<p class="maul-health"></p>
+			</div>
+			<div class="col-xm-3  defender yoda-defender">
+				<p>Yoda</p>
+				<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
+				<p class="yoda-health"></p>
+			</div>
+		</div>
+	</div>
+
 	<!-- remaining character to figth zone-->
 	<div class="container enemy-cont">
-			<h1>Enemies available</h1>
+		<h1>Enemies available</h1>
 		<div class="row ">
 			<div class="col-xm-3  enemy luke-enemy">
 				<p>Luke Skywalker</p>
@@ -149,10 +140,8 @@
 				<p class="yoda-health"></p>
 			</div>
 		</div>
-		
 	</div>
-	
-		<div class="container">
+	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-xm-6 align-self-center">
 				<button onClick="location.href=location.href" class="btn btn-dark">New Game</button>
@@ -160,20 +149,16 @@
 		</div>
 	</div>
 
-	
-</div>
+	<script src="assets/javascript/game.js"></script>
 
-<script src="assets/javascript/game.js"></script>
-	
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 		crossorigin="anonymous"></script>
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
-	</div>
+		crossorigin="anonymous"></script> -->
+	
 </body>
 
 </html>

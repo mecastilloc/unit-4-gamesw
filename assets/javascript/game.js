@@ -1,6 +1,6 @@
 
 var luke = {
-	hp: 120,
+	hp: 125,
 	name: "Luke Skywalker",
 	attack: 0,
 	base: 9,
@@ -15,7 +15,7 @@ var vader = {
 	name: "Darth Vader",
 	attack: 0,
 	base: 10,
-	defend: 9,
+	defend: 13,
 	player: false,
 	defender: false,
 	death: false,
@@ -141,7 +141,7 @@ $(document).ready(function () {
 		$("#win-lose").text("");
 		$("#attack").show();
 		luke.defender = true;
-		defenderCosen = true;
+	//	defenderChosen = true;
 		if (vader.player && choosing) {
 			console.log(choosing);
 			$(".character-cont").hide();
@@ -158,7 +158,6 @@ $(document).ready(function () {
 			$(".defender").show();
 			$(".vader-defender, .maul-defender, .yoda-defender").hide();
 			choosing = false;
-			console.log(choosing);
 		}
 		else if (maul.player && choosing) {
 			$(".character-cont").hide();
@@ -377,29 +376,28 @@ $(document).ready(function () {
 					luke.attack += luke.base;
 					$("#playermsg").text("You have attacked " + vader.name + " whith an attack power of " + luke.attack);
 					$("#defendermsg").text(vader.name + " Attacked you whith a counter attack power of " + vader.defend);
-					console.log("luke hp" + luke.hp);
-					console.log("vader hp" + vader.hp);
+					// console.log("luke hp" + luke.hp);
+					// console.log("vader hp" + vader.hp);
 					$(".luke-health").text(luke.hp);
 					$(".vader-health").text(vader.hp);
 				}
 				if (vader.hp < 1 && luke.hp > 0 && !vader.death) {
 					choosing = true;
 					$("#choosenew").text("choose new enemy to figth")
+					$("#win-lose").text("You defeated " + vader.name);
 					$(".vader-defender ").hide();
 					$(".vader-enemy ").hide();
 					$(".defender").hide();
 					vader.death = true;
 					vader.defend = false;
 					$("#attack").hide();
-					$("#win-lose").text("You defeated " + vader.name);
 					$("#playermsg").text("");
 					$("#defendermsg").text("");
-					
 				}
 				else if (luke.hp < 1 && vader.hp > 0) {
 					$("#attack").hide();
-					$(".defender").hide();
 					$("#win-lose").text(vader.name + " defeated you");
+					$(".defender").hide();
 					$("#playermsg").text("");
 					$("#defendermsg").text("");
 				}
@@ -410,21 +408,20 @@ $(document).ready(function () {
 					$("#win-lose").text("Both died with last stroke");
 					$("#playermsg").text("");
 					$("#defendermsg").text("");
-					
 				}
 			}
 
 			//luke vs maul
 			if (maul.defender) {
-				if (luke.player && maul.defender && luke.hp > 0 && maul.hp > 0) {
+					if (luke.player && maul.defender && luke.hp > 0 && maul.hp > 0) {
 					console.log("fighting");
 					luke.hp -= maul.defend;
 					maul.hp -= luke.attack;
 					luke.attack += luke.base;
 					$("#playermsg").text("You have attacked " + maul.name + " whith an attack power of " + luke.attack);
 					$("#defendermsg").text(maul.name + " Attacked you whith a counter attack power of " + maul.defend);
-					console.log("luke hp" + luke.hp);
-					console.log("maul hp" + maul.hp);
+					// console.log("luke hp" + luke.hp);
+					// console.log("maul hp" + maul.hp);
 					$(".luke-health").text(luke.hp);
 					$(".maul-health").text(maul.hp);
 				}
@@ -468,8 +465,8 @@ $(document).ready(function () {
 					luke.attack += luke.base;
 					$("#playermsg").text("You have attacked " + yoda.name + " whith an attack power of " + luke.attack);
 					$("#defendermsg").text(yoda.name + " Attacked you whith a counter attack power of " + yoda.defend);
-					console.log("luke hp" + luke.hp);
-					console.log("yoda hp" + yoda.hp);
+					// console.log("luke hp" + luke.hp);
+					// console.log("yoda hp" + yoda.hp);
 					$(".luke-health").text(luke.hp);
 					$(".yoda-health").text(yoda.hp);
 				}
@@ -510,14 +507,13 @@ $(document).ready(function () {
 			if (luke.defender) {
 				if (vader.player && luke.defender && vader.hp > 0 && luke.hp > 0) {
 					console.log("fighting");
-
 					vader.hp -= luke.defend;
 					luke.hp -= vader.attack;
 					vader.attack += vader.base;
 					$("#playermsg").text("You have attacked " + luke.name + " whith an attack power of " + vader.attack);
 					$("#defendermsg").text(luke.name + " Attacked you whith a counter attack power of " + luke.defend);
-					console.log("vader hp" + vader.hp);
-					console.log("luke hp" + luke.hp);
+					// console.log("vader hp" + vader.hp);
+					// console.log("luke hp" + luke.hp);
 					$(".vader-health").text(vader.hp);
 					$(".luke-health").text(luke.hp);
 				}
@@ -525,23 +521,29 @@ $(document).ready(function () {
 					choosing = true;
 					$("#choosenew").text("choose new enemy to figth");
 					$("#win-lose").text("You defeated " + luke.name);
-					//$(".defender").hide();
+					$(".defender").hide();
 					$(".luke-defender ").hide();
 					$(".luke-enemy ").hide();
 					luke.death = true;
 					luke.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && luke.hp > 0) {
 					$("#attack").hide();
-					//$(".defender").hide();
+					(".defender").hide();
 					$("#win-lose").text(luke.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && luke.hp < 1) {
 					$("#attack").hide();
-					//$(".defender").hide();
+					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -554,8 +556,8 @@ $(document).ready(function () {
 					vader.attack += vader.base;
 					$("#playermsg").text("You have attacked " + maul.name + " whith an attack power of " + vader.attack);
 					$("#defendermsg").text(maul.name + " Attacked you whith a counter attack power of " + maul.defend);
-					console.log("vader hp" + vader.hp);
-					console.log("maul hp" + maul.hp);
+					// console.log("vader hp" + vader.hp);
+					// console.log("maul hp" + maul.hp);
 					$(".vader-health").text(vader.hp);
 					$(".maul-health").text(maul.hp);
 				}
@@ -569,17 +571,23 @@ $(document).ready(function () {
 					maul.death = true;
 					maul.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && maul.hp > 0) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$("#win-lose").text(maul.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && maul.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -592,8 +600,8 @@ $(document).ready(function () {
 					vader.attack += vader.base;
 					$("#playermsg").text("You have attacked " + yoda.name + " whith an attack power of " + vader.attack);
 					$("#defendermsg").text(yoda.name + " Attacked you whith a counter attack power of " + yoda.defend);
-					console.log("vader hp" + vader.hp);
-					console.log("yoda hp" + yoda.hp);
+					// console.log("vader hp" + vader.hp);
+					// console.log("yoda hp" + yoda.hp);
 					$(".vader-health").text(vader.hp);
 					$(".yoda-health").text(yoda.hp);
 				}
@@ -607,17 +615,23 @@ $(document).ready(function () {
 					yoda.death = true;
 					yoda.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && yoda.hp > 0) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$("#win-lose").text(yoda.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (vader.hp < 1 && yoda.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 		}
@@ -633,8 +647,8 @@ $(document).ready(function () {
 					maul.attack += maul.base;
 					$("#playermsg").text("You have attacked " + luke.name + " whith an attack power of " + maul.attack);
 					$("#defendermsg").text(luke.name + " Attacked you whith a counter attack power of " + luke.defend);
-					console.log("maul hp" + maul.hp);
-					console.log("luke hp" + luke.hp);
+					// console.log("maul hp" + maul.hp);
+					// console.log("luke hp" + luke.hp);
 					$(".maul-health").text(maul.hp);
 					$(".luke-health").text(luke.hp);
 				}
@@ -648,17 +662,23 @@ $(document).ready(function () {
 					luke.death = true;
 					luke.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && luke.hp > 0) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$("#win-lose").text(luke.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && luke.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -671,8 +691,8 @@ $(document).ready(function () {
 					maul.attack += maul.base;
 					$("#playermsg").text("You have attacked " + vader.name + " whith an attack power of " + maul.attack);
 					$("#defendermsg").text(vader.name + " Attacked you whith a counter attack power of " + vader.defend);
-					console.log("maul hp" + maul.hp);
-					console.log("vader hp" + vader.hp);
+					// console.log("maul hp" + maul.hp);
+					// console.log("vader hp" + vader.hp);
 					$(".maul-health").text(maul.hp);
 					$(".vader-health").text(vader.hp);
 				}
@@ -686,18 +706,23 @@ $(document).ready(function () {
 					vader.death = true;
 					vader.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && vader.hp > 0) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$("#win-lose").text(vader.name + " defeated you");
-
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && vader.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -710,8 +735,8 @@ $(document).ready(function () {
 					maul.attack += maul.base;
 					$("#playermsg").text("You have attacked " + yoda.name + " whith an attack power of " + maul.attack);
 					$("#defendermsg").text(yoda.name + " Attacked you whith a counter attack power of " + yoda.defend);
-					console.log("maul hp" + maul.hp);
-					console.log("yoda hp" + yoda.hp);
+					// console.log("maul hp" + maul.hp);
+					// console.log("yoda hp" + yoda.hp);
 					$(".maul-health").text(maul.hp);
 					$(".yoda-health").text(yoda.hp);
 				}
@@ -725,18 +750,23 @@ $(document).ready(function () {
 					yoda.death = true;
 					yoda.defender=false;
 					$("#attack").hide();
-					alert("yoda death");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && yoda.hp > 0) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$("#win-lose").text(yoda.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (maul.hp < 1 && yoda.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 		}
@@ -751,33 +781,38 @@ $(document).ready(function () {
 					yoda.attack += yoda.base;
 					$("#playermsg").text("You have attacked " + luke.name + " whith an attack power of " + yoda.attack);
 					$("#defendermsg").text(luke.name + " Attacked you whith a counter attack power of " + luke.defend);
-					console.log("yoda hp" + yoda.hp);
-					console.log("luke hp" + luke.hp);
+					// console.log("yoda hp" + yoda.hp);
+					// console.log("luke hp" + luke.hp);
 					$(".yoda-health").text(yoda.hp);
 					$(".luke-health").text(luke.hp);
 				}
 				if (luke.hp < 1 && yoda.hp > 0 && !luke.death) {
 					choosing = true;
 					$("#choosenew").text("choose new enemy to figth")
+					$("#win-lose").text("You defeated " + luke.name);
 					$(".defender").hide();
 					$(".luke-defender ").hide();
 					$(".luke-enemy ").hide();
 					luke.death = true;
 					luke.defender = false;
 					$("#attack").hide();
-					$("#win-lose").text("You defeated " + luke.name);
-
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && luke.hp > 0) {
 					$("#attack").hide();
 					$("#win-lose").text(luke.name + " defeated you");
 					$(".defender").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && luke.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -790,8 +825,8 @@ $(document).ready(function () {
 					yoda.attack += yoda.base;
 					$("#playermsg").text("You have attacked " + vader.name + " whith an attack power of " + yoda.attack);
 					$("#defendermsg").text(vader.name + " Attacked you whith a counter attack power of " + vader.defend);
-					console.log("yoda hp" + yoda.hp);
-					console.log("vader hp" + vader.hp);
+					// console.log("yoda hp" + yoda.hp);
+					// console.log("vader hp" + vader.hp);
 					$(".yoda-health").text(yoda.hp);
 					$(".vader-health").text(vader.hp);
 				}
@@ -805,18 +840,23 @@ $(document).ready(function () {
 					vader.death = true;
 					vader.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && vader.hp > 0) {
 					$("#attack").hide();
-					$(".defender").hide();
 					$("#win-lose").text(vader.name + " defeated you");
-
+					$(".defender").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && vader.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 
@@ -829,8 +869,8 @@ $(document).ready(function () {
 					yoda.attack += yoda.base;
 					$("#playermsg").text("You have attacked " + maul.name + " whith an attack power of " + yoda.attack);
 					$("#defendermsg").text(maul.name + " Attacked you whith a counter attack power of " + maul.defend);
-					console.log("yoda hp" + yoda.hp);
-					console.log("maul hp" + maul.hp);
+					// console.log("yoda hp" + yoda.hp);
+					// console.log("maul hp" + maul.hp);
 					$(".yoda-health").text(yoda.hp);
 					$(".maul-health").text(maul.hp);
 				}
@@ -844,17 +884,22 @@ $(document).ready(function () {
 					maul.death = true;
 					maul.defender = false;
 					$("#attack").hide();
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && maul.hp > 0) {
 					$("#attack").hide();
-					$(".defender").hide();
 					$("#win-lose").text(maul.name + " defeated you");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 				else if (yoda.hp < 1 && maul.hp < 1) {
 					$("#attack").hide();
 					$(".defender").hide();
 					$(".enemy-cont").hide();
 					$("#win-lose").text("Both died with last stroke");
+					$("#playermsg").text("");
+					$("#defendermsg").text("");
 				}
 			}
 		}
