@@ -1,5 +1,5 @@
 html{
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/bg2.jpg");
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -7,97 +7,77 @@ html{
     background-size: cover;
     height: 100%;
     color: white;
-    z-index: -1;
-}
+   }
+
+
 
 body{
     color: white;
-}
-    p {
-        margin: 0;
-        color: white;
-    }
-    img{
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        cursor: pointer;
-        border: 10px solid red;
-        margin: 0 10px 0 10px;
-        
-        }
-
-.character{
-    text-align: center;
-}
-
-/* .choosenrow{
-    float: left;
-} 
-#msg{
-    float: left;
-}
-/* }
-.title{
-    background: rgb(255, 0, 0);
-    color: azure;
-    font-size: 35px;
-    font-weight: bolder;
-    width: 280px;
-    text-align: center;
-}
-
-.container{
-    color: rgb(255, 251, 0);
-    /* font-weight: bold; 
-    font-size: 18px;
-    /* inline-size: 2px; 
-}
-.instructions{
-    background: rgba(0, 247, 255, 0.2);
     
 }
+    
+    #luke-img, #vader-img, #maul-img, #yoda-img{
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+                
+            
+        
+        }
+        #startpage{
+            position: absolute;
+                z-index: 1000;
+                width: 100%;
+                height: 100%;
+              border: none;
+              background-color: black;
+         
+        }
 
-.target{
-    background: rgba(47, 255, 245, 0.4);
+
+        .col-xm-3{
+    text-align: center;
+    font-size: 13px;
+    /* border: 1px solid rgb(22, 0, 119); */
+    margin: 0 10px 7px 10px;
 }
 
-#randomNumber{
-    font-size: 40px;
-    font-weight: bolder;
-    color: white;
+#playermsg{
+    color: greenyellow;
+    font-weight: bold;
+    
 }
-.stats{
-    background: rgba(78, 1, 88, 0.336);
-}
-
-#wins-txt{
-    color: rgb(7, 167, 7);
-    font-weight: bolder;
-    font-size: 20px;
+#defendermsg{
+    color: orangered;
+    font-weight: bold;
 }
 
-#losses-txt{
-    color: red;
-    font-weight: bolder;
-    font-size: 20px;
-}
-img{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    cursor: pointer;
-    }
-    .totalScore{
-        background: rgba(47, 61, 255, 0.5);
-    }
+#win-lose{
+    color: yellow;
+    font-weight: bold;
 
-#totalScore{
-        font-size: 30px;
-        font-weight: bolder;
-        color: white;
+}
+
+#choosenew{
+    /* text-align: center; */
+    font-size: 27px;
+    color: rgb(0, 217, 255);
+    font-weight: bold;
 } 
+#attack{
+    position: relative;
+    margin-left: 30px;
+}
 
+p{
+    margin:0;
+    /* font-weight: bold; */
+}
+h1{
+    color: deeppink;
+    font-size: 27px;
+}
 .btn{
-    margin-top: 10px;
-} */
+    font-weight: bold;
+}
+

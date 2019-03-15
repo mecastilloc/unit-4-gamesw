@@ -22,15 +22,12 @@
 </head>
 
 <body class="bg-transparent">
-	<!-- Wait for the page to load template -->
-	<div class="container-fluid" id="startpage">
-		<img src="" alt="">
-	
-</div>
+		
+		<script src="assets/javascript/game.js"></script>
 
 
 	<!-- characters to choose zone-->
-	<div class="container character-cont">
+	<div class="container characters">
 		<div class="row ">
 			<div class="col-xm-3  character luke-char">
 				<p>Luke Skywalker</p>
@@ -39,67 +36,65 @@
 			</div>
 			<div class="col-xm-3  character vader-char">
 				<p>Darth Vader</p>
-				<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
+				<img id="char2-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
 				<p class="vader-health"></p>
 			</div>
 			<div class="col-xm-3 character maul-char">
 				<p>Darth Maul</p>
-				<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
+				<img id="char3-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
 				<p class="maul-health"></p>
 			</div>
 			<div class="col-xm-3  character yoda-char">
 				<p>Yoda</p>
-				<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
+				<img id="char4-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
 				<p class="yoda-health"></p>
 			</div>
 		</div>
-		<h1> Choose Your Character</h1>
+		<h1 class="ch"> Choose Your Character</h1>
 	</div>
 
 	
 
 	<!-- Chosen character zone-->
-	<div class="container chosen-cont">
-			<h1> You are now...</h1>
+	<div class="container chosen">
+			<h1> You are Fighting With</h1>
 		<div class="row choosenrow">
-			<div class="col-xm-3  chosen luke-chosen">
+				<div class="col-xm-3  chosen luke-chosen">
 				<p>Luke Skywalker</p>
 				<img id="luke-img" data-value="" src="assets/images/luke.jpg" alt="img1" />
 				<p class="luke-health"></p>
 			</div>
 			<div class="col-xm-3  chosen vader-chosen">
 				<p>Darth Vader</p>
-				<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
+				<img id="char2-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
 				<p class="vader-health"></p>
 			</div>
 			<div class="col-xm-3 chosen maul-chosen">
 				<p>Darth Maul</p>
-				<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
+				<img id="char3-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
 				<p class="maul-health"></p>
 			</div>
 			<div class="col-xm-3  chosen yoda-chosen">
 				<p>Yoda</p>
-				<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
+				<img id="char4-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
 				<p class="yoda-health"></p>
 			</div>
-		</div>
-
 			
-		<button id="attack" class="btn btn-warning">Attack</button>
+		</div>
+			
+		<button id="attack">Attack</button>
 		<div id="msg" class="container">
-				<h2 id="win-lose"></h2>	
-			<p id="playermsg"></p>
+				<p id="playermsg"></p>
 				<p id="defendermsg"></p>
 				<p id="choosenew"></p>
-				
+				<h1 id="win-lose"></h1>
 			</div>
 	</div>
-	
+	<br>
 	
 
 	<!-- defender zone-->
-	<div class="container defender defender-cont">
-			<h1>Your Challenger is...</h1>
+	<div class="container defender">
 			<div class="row ">
 				<div class="col-xm-3  defender luke-defender">
 					<p>Luke Skywalker</p>
@@ -108,25 +103,25 @@
 				</div>
 				<div class="col-xm-3  defender vader-defender">
 					<p>Darth Vader</p>
-					<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
+					<img id="char2-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
 					<p class="vader-health"></p>
 				</div>
 				<div class="col-xm-3 defender maul-defender">
 					<p>Darth Maul</p>
-					<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
+					<img id="char3-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
 					<p class="maul-health"></p>
 				</div>
 				<div class="col-xm-3  defender yoda-defender">
 					<p>Yoda</p>
-					<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
+					<img id="char4-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
 					<p class="yoda-health"></p>
 				</div>
 			</div>
-				</div>
-		
+			<h1>Defender</h1>
+		</div>
+		<br>
 	<!-- remaining character to figth zone-->
-	<div class="container enemy-cont">
-			<h1>Enemies available</h1>
+	<div class="container enemy">
 		<div class="row ">
 			<div class="col-xm-3  enemy luke-enemy">
 				<p>Luke Skywalker</p>
@@ -135,36 +130,66 @@
 			</div>
 			<div class="col-xm-3  enemy vader-enemy">
 				<p>Darth Vader</p>
-				<img id="vader-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
+				<img id="char2-img" data-value="" src="assets/images/vader.jpg" alt="img2" />
 				<p class="vader-health"></p>
 			</div>
 			<div class="col-xm-3 enemy maul-enemy">
 				<p>Darth Maul</p>
-				<img id="maul-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
+				<img id="char3-img" data-value="" src="assets/images/maul.jpg" alt="img3" />
 				<p class="maul-health"></p>
 			</div>
 			<div class="col-xm-3  enemy yoda-enemy">
 				<p>Yoda</p>
-				<img id="yoda-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
+				<img id="char4-img" data-value="" src="assets/images/yoda.jpg" alt="img4" />
 				<p class="yoda-health"></p>
 			</div>
 		</div>
-		
+		<h1>Enemies</h1>
 	</div>
 	
 		<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-xm-6 align-self-center">
-				<button onClick="location.href=location.href" class="btn btn-dark">New Game</button>
+				<button onClick="location.href=location.href" class="btn btn-dark">Reset Scores</button>
 			</div>
 		</div>
 	</div>
 
 	
 </div>
+	<!-- <script src="assets/javascript/game.js"></script> -->
 
-<script src="assets/javascript/game.js"></script>
+
+	<!-- <script>
+var chars= [
+	luke:{
+		name: "Luke SkyWalker",
+		photo: "assets/images/luke.jpg",
+	},
+	vader: {
+		name: "Luke SkyWalker",
+		photo: "assets/images/vader.jpg",
+	},
+	maul: {
+		name: "Luke SkyWalker",
+		photo: "assets/images/maul.jpg",
+	},
+	yoda: {
+		name: "Luke SkyWalker",
+		photo: "assets/images/yoda.jpg",
+	},
+]
+
+
+console.log(chars.length); -->
+
+	<!-- //	$("#char1", {
+ // src: 
+//}).appendTo("#[name)");
 	
+	
+	
+	</script> -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
