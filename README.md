@@ -66,6 +66,6 @@ commit 4:
 Bugs in conditions to win or loose fixed, final css styling, code format
 
 commit 5:
-JQuery link updated, Javascript Code agruped in functions, new Game button color change, Readme.md  update
+JQuery link updated, Javascript Code grouped in functions, new Game button color change, Readme.md  update
 
 
