@@ -1,123 +1,43 @@
 
-origial...
 
-luke:
-hp: 120,
-base: 9,
-defend: 15
+#### Combats
+Player  Opponent1   Opponent2   Opponent3   Result              wins    loses   ties
+-------------------------------------------------------------------------------------
+luke    vader       maul        yoda        lose with yoda        9       6       9        
+                    yoda        maul        tie with yoda   
 
-vader:
-hp: 150
-base: 10,
-defend: 9
+        maul        vader       yoda        tie with yoda
+                    yoda        vader       win
 
-
-maul:
-hp:100
-base: 14,
-defend: 8,
-
-maul:
-hp:180
-base: 8,
-defend: 15,
-
-
-luke
-        vader
-            maul
-            yoda            empate
-
-   
-        vader
-            yoda
-            maul            empate
-
-luke    
-        maul
-            vader
-            yoda            empate
-        maul
-            yoda
-            vader                           win
+        yoda        vader       maul        lose with vader
+                    maul        vader       lose with vader
+               
+vader	luke		maul        yoda        tie with yoda
+ 					yoda        maul        tie with maul
+ 			     
+ 	    maul        luke        yoda        win
+ 	                yoda        maul	    win    
+ 	      
+        yoda        luke        maul        tie with maul
+                    maul        luke        tie with luke
+ 
+ maul   luke        vader       yoda        tie with vader
+                    yoda        vader       lose with yoda
+ 
+        vader       luke        yoda        tie with luke
+                    yoda        luke        tie with yoda
             
-luke
-        yoda
-            vader
-            maul                                        lose
-        yoda
-            maul
-            vader          empate
-        
+        yoda        luke        vader       lose with luke
+                    vader       luke        lose with vader
 
-vader
-    luke
-        maul
-        yoda              em[ate+]
 
-    luke
-        yoda
-        maul               empate
+yoda    luke        vader       maul        win
+                    maul        vader       win
 
-vader
-    maul
-        luke
-        yoda                                win
-    maul
-        yoda                                win
-        luke
+        vader       luke        maul        win
+                    maul        luke        win
 
-vader
-        yoda
-            luke
-            maul           empate
-        yoda
-            maul
-            luke            empate
+        maul        luke        vader       win
+                    vader       luke        win
 
-maul
-        luke
-            vader
-            yoda                                            lose
-        luke
-            yoda
-            vader                                           lose
 
-maul    
-        vader
-            luke
-            yoda            empate
-        vader
-            yoda
-            luke            empate
-
-maul    yoda
-            luke 
-            vader                                           lose
-        yoda
-            vader
-            luke               empate
-
-yoda
-        luke
-            vader 
-            maul win
-        luke
-            maul
-            vader win
-
-yoda
-        vader
-            luke
-            maul win
-        vader
-            maul
-            luke win
-
-yoda
-        maul
-            luke win
-            vader
-        maul
-            vader 
-            luke win
